@@ -8,7 +8,7 @@ async function getBlogPost(slug: string) {
 export async function generateMetadata({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) {
 	const { slug } = await params;
 	const blog = await getBlogPost(slug);
@@ -19,7 +19,7 @@ export async function generateMetadata({
 }
 
 type Props = {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 };
 const BlogPost = async ({ params }: Props) => {
 	const { slug } = await params;
