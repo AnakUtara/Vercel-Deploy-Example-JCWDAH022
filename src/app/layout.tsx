@@ -4,6 +4,8 @@ import "./globals.css";
 import { UserProvider } from "@/context/user.context";
 import ReduxProvider from "@/store/provider";
 import { Toaster } from "sonner";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { gaId } from "./config/app.config";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -34,6 +36,7 @@ export default function RootLayout({
 					<UserProvider>{children}</UserProvider>
 				</ReduxProvider>
 				<Toaster richColors />
+				<GoogleAnalytics gaId={gaId as string} />
 			</body>
 		</html>
 	);

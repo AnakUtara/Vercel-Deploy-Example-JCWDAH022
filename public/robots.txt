@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vercel-deploy-example-jcwdah-022.vercel.app
+
+# Sitemaps
+Sitemap: https://vercel-deploy-example-jcwdah-022.vercel.app/sitemap.xml
